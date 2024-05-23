@@ -1,0 +1,6 @@
+Xception är en bildigenkännings model som använder sig av en ny teknik som kallas depthwise separable convolutions. Den delar upp beräkningarna i mindre delar vilket gör de mer effektiva i beräkningarna. 
+Den använder flera små operationer för varje kanal i en bild och sedan läggs alla kanaler ihop i slutet med en 1x1-konvolution. Den är snabbare och effektivare än de tidigare modellerna så som Inception V3.
+Den är tränad på ImageNet som är en stor databas med bilder. Imagenet används ofta till att träna just bildigenkännings modeller. Med den kan man träna modeller på väldigt många olika kategorier t.ex bilar hus flygplan djur osv. Men i denna labb används den bara för att känna igen hundar och katter.
+
+Vi tillämpar denna model genom att ta bort dess ursprungliga fullt anslutna lager (MLP) och lägger till vår egna. Genom detta sparar vi deras vikter och använder de i vår egna tränaíng på vårt dataset.
+Dokumentation fanns i tidigare code alongs på Xception och det var modellen som jag fann mest begriplig då vi redan har gått igenom den lite innan.
